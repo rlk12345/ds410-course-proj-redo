@@ -1,0 +1,10 @@
+Machine learning is used in data science for prediction and classification.
+Cybersecurity protects systems and networks from digital attacks.
+Large language models are trained on massive datasets of text.
+Deep learning uses neural networks to learn complex patterns.
+Big data platforms like Spark allow distributed data processing.
+Topic modeling discovers hidden themes in document collections.
+Statistics and probability form the foundation of machine learning.
+Natural language processing analyzes text and speech.
+Cloud computing provides scalable infrastructure for applications.
+Artificial intelligence is transforming nearly every industry.
