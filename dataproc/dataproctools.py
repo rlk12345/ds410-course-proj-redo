@@ -92,7 +92,7 @@ def extracted_wet_to_df(spark_session, extracted_wet_rdd):
         return split_key[2].split(': ')[1]
 
     def get_warc_languages(split_key):
-        return split_key[5].split(': ')[1].split(',')
+        return split_key[5].split(': ')[1]
 
     def get_tld_from_url(url):
         import re
