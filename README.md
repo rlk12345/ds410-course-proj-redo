@@ -1,12 +1,10 @@
 # ds410-course-proj-redo
 
-I have example code up in examples/data_proc_example.ipynb
+I have example code up in "full code.ipynb"
 
-You don't need to run the get data script, I already have the necessary files downloaded. we need to modify the script if we want to get the data from a different month though
+You don't need to run the get data script, we already have the necessary files downloaded. We need to modify the script if we want to get the data from a different month though
 
-Look at the jupyter notebook in the playground folder for my work in extracting the plaintext WET file in parallel. A large part of this has been modularized though; look at the data_proc_example to see what I mean 
-
-Also request at least 16 GB of ram on ROAR when you're trying to run the notebook
+Also request at least 16 GB of ram on ROAR when you're trying to run the notebook with 20k sites
 
 Use GitHub Wiki for more detailed documentation 
 
