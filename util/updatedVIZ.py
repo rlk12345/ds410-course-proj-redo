@@ -9,7 +9,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-OUTPUT_DIR = "lda_outputs"
+OUTPUT_DIR = "visualizations"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
@@ -31,7 +31,7 @@ from pyspark.ml.linalg import DenseVector, SparseVector
 
 
 #here we create a function to create visualzations based on the results we get from LDA
-def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10):
+def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10, show=False):
 
     topics_df = lda_model.describeTopics(maxTermsPerTopic=num_words)
     topics = topics_df.collect()
@@ -86,7 +86,8 @@ def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10):
 
         plt.tight_layout()
         plt.savefig(os.path.join(OUTPUT_DIR, "topic_wordclouds.png"), dpi=300)
-        plt.show()
+        if show:
+            plt.show()
 
     # Here we are creating our third visualzation: Document Topic Distributions. 
     if df_transformed is not None:
@@ -96,7 +97,7 @@ def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10):
         topic_probs = []
         for row in rows:
             dist = row.topicDistribution
-            
+
             if isinstance(dist, (DenseVector, SparseVector)):
                 dist = dist.toArray()
             topic_probs.append([float(x) for x in dist])
@@ -114,7 +115,8 @@ def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10):
         plt.xticks(rotation=45)
         plt.tight_layout()
         plt.savefig(os.path.join(OUTPUT_DIR, "topic_average_probs.png"), dpi=300)
-        plt.show()
+        if show:
+            plt.show()
 
         if HAS_SEABORN:
             fig, ax = plt.subplots(figsize=(10, 6))
@@ -124,7 +126,8 @@ def visualize_topics(lda_model, vocabulary, df_transformed=None, num_words=10):
             ax.set_title("Document-Topic Distribution")
             plt.tight_layout()
             plt.savefig(os.path.join(OUTPUT_DIR, "topic_heatmap.png"), dpi=300)
-            plt.show()
+            if show:
+                plt.show()
 
 
 
