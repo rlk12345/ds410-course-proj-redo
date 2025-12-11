@@ -8,6 +8,8 @@ Look at the jupyter notebook in the playground folder for my work in extracting 
 
 Also request at least 16 GB of ram on ROAR when you're trying to run the notebook
 
+Use GitHub Wiki for more detailed documentation 
+
 ## REPO STRUCTURE
 ```
 ds410-course-proj-redo
