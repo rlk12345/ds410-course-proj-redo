@@ -9,7 +9,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 import os
-OUTPUT_DIR = "visualizations"
+OUTPUT_DIR = "visualization_outputs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 
